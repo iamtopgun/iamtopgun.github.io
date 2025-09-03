@@ -8,6 +8,6 @@ tags: []
 
 你绝对想不到它一般出现的场合
 
-![微报](20180514.jpg){: .center-block :}
+![微报](https://github.com/iamtopgun/iamtopgun.github.io/blob/master/_posts/20180514.jpg){: .center-block :}
 
 
