@@ -6,14 +6,8 @@ categories: Career
 tags: []
 ---
 
+你绝对想不到它一般出现的场合
+
+![微报](20180514.jpg){: .center-block :}
 
 
-How about a yummy crepe?
-
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
-
-It can also be centered!
-
-![Crepe](20180514.jpg){: .center-block :}
-
- to a [local doc](20180514.jpg),
