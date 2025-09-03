@@ -7,8 +7,7 @@ tags: []
 ---
 
 你绝对想不到它一般出现的场合
-![图1](https://github.com/iamtopgun/iamtopgun.github.io/blob/master/assets/images/IMG_1650.JPG)
 
-![new图](/assets/images/IMG_1650.JPG)
+![微报图](/assets/images/20180514a.jpeg)
 
 
