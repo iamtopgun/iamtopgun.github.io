@@ -14,4 +14,6 @@ How about a yummy crepe?
 
 It can also be centered!
 
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .center-block :}
+![Crepe](20180514.jpg){: .center-block :}
+
+ to a [local doc](20180514.jpg),
