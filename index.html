@@ -1,0 +1,2989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Home | Qin Wei</title>
+<meta name="generator" content="Jekyll v4.4.1">
+<meta property="og:title" content="Home">
+<meta name="author" content="TOPGUN">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Qin Wei’s offical website.">
+<meta property="og:description" content="Qin Wei’s offical website.">
+<link rel="canonical" href="/jekyll-theme-yat/">
+<meta property="og:url" content="/jekyll-theme-yat/">
+<meta property="og:site_name" content="Qin Wei">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Home">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"TOPGUN"},"description":"Qin Wei’s offical website.","headline":"Home","name":"Qin Wei","url":"/jekyll-theme-yat/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="icon" href="">
+  <link rel="canonical" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css"> -->
+  <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/typeface-noto-sans/0.0.72/index.min.css">
+
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="/jekyll-theme-yat/feed.xml" title="Qin Wei">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js" async></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+<script src="//cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/umd/photoswipe-lightbox.umd.min.js" async></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/umd/photoswipe.umd.min.js" async></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.min.css" rel="stylesheet">
+<style>
+  .pswp .pswp__container .pswp__img {
+    background-color: white;
+  }
+</style>
+
+<script>
+  function initPhotoSwipe() {
+    let customOptions = {};
+
+    try {
+      const data = ``.replaceAll("=>", ":");
+      customOptions = JSON.parse(data);
+    } catch (e) {
+      console.info("Invalid custom photo previewer options! " + e.message);
+    }
+
+    // Define object and gallery options
+    const options = Object.assign(
+      {
+        gallery: "section.main",
+        children: "a.photo-swipe",
+        photo_scale: 2,
+        // dynamic import is not supported in UMD version
+        pswpModule: PhotoSwipe,
+      },
+      customOptions
+    );
+
+    const galleryEl = document.querySelector(options.gallery);
+    if (!galleryEl) {
+      return;
+    }
+
+    const imgEls = [];
+    const els = galleryEl.querySelectorAll("img:not(.emoji)");
+    els.forEach((el) => {
+      if (el.src.trim() == "") {
+        return;
+      }
+      if (!imgEls.includes(el)) {
+        imgEls.push(el);
+      }
+    });
+
+    if (imgEls.length === 0) {
+      return;
+    }
+
+    imgEls.forEach((imgEl) => {
+      imgEl.outerHTML = `
+      <a class="photo-swipe"
+        href="${imgEl.src}"
+        data-pswp-width="${
+          Math.max(imgEl.naturalWidth, imgEl.width) * options.photo_scale
+        }"
+        data-pswp-height="${
+          Math.max(imgEl.naturalHeight, imgEl.height) * options.photo_scale
+        }"
+        data-pswp-caption="${imgEl.getAttribute("caption") || imgEl.alt}"
+        target="_blank">
+        ${imgEl.outerHTML}
+      </a>`;
+    });
+
+    // Initialize PhotoSwipe 5
+    var lightbox = new PhotoSwipeLightbox(options);
+
+    lightbox.init();
+  }
+
+  window.addEventListener("load", initPhotoSwipe);
+</script>
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header site-header-transparent" role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="Qin Wei" src="" onerror="this.style.display='none'">
+  Qin Wei
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<!-- no translate <div class="page-link" style="display: inline;">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<div class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+</div>
+             -->
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;documentElement.setAttribute("data-header-transparent", "");var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="page-banner">
+    <div class="page-banner-img">
+<div style="background-image: url(/jekyll-theme-yat/assets/images/banners/home.jpeg)"></div>
+        <img class="img-placeholder" src="/jekyll-theme-yat/assets/images/banners/home.jpeg">
+</div>
+    <div class="wrapper">
+      <div class="page-banner-inner"><div class="page-banner-default">
+            <h1 class="page-banner-heading">
+              TOPGUN
+            </h1>
+            <h2 class="page-banner-subheading">
+              The World Is A Book And Those Who Don't Travel Read Only One Page.
+            </h2>
+          </div></div>
+    </div>
+  </section><script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+        document.dispatchEvent(new Event('theme-changed'));
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="articles">
+  
+
+  
+
+
+  
+
+
+
+
+<div class="pagination">
+  <!-- Post list links -->
+  <ul class="post-list z-image-style">
+    <!-- Top list item -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item top-post">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/%E6%96%87%E5%AD%A6/1990/09/01/goodluck.html">
+      好运设计<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  1990, Sep 01</span><span class="post-author left-vsplit"><i class="fa fa-pencil"></i> 史铁生</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/%E6%96%87%E5%AD%A6/1990/09/01/goodluck.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/%E5%8F%B2%E9%93%81%E7%94%9F.jpg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/%E6%96%87%E5%AD%A6/1990/09/01/goodluck.html">
+      <p>要是今生遗憾大多，在背运的当儿，尤其在背运之后情绪渐渐平静了或麻木了，你独自呆一会儿，抽支烟，不妨想一想来世。你不妨随心所欲地设想一下（甚至是设计一下）自己的来世。你不妨试试。在背运的时候，至少我觉得这不失为一剂良药——先可以安神，而后又可以振奋，就像输惯了的赌徒把屡屡的败绩置于脑后，输光了裤子也还是对下一局存着饱满的好奇和必赢的冲动。这没有什么不好。这有什么不好吗？无非是说迷信，好吧，你就迷信它一回。无非是说这不科学，行，况且对于走运和背运的事实，科学本来无能为力。无非说这是空想，这是自欺，这是做梦，没用。那么希望有用吗？希望是不是必得在被证明了是可以达到的之后才能成立？当然，这些差不多都是废话，背了运的时候哪想得起来这么多废话？背了运的时候只是想走运有多么好，要是能走运有多好。到底... <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item top-post">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/life/2010/08/19/wangbo.html">
+      你的所做所为，有否使这个世界更美好？<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2010, Aug 19</span><span class="post-author left-vsplit"><i class="fa fa-pencil"></i> TOPGUN</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/life/2010/08/19/wangbo.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/light.jpg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/life/2010/08/19/wangbo.html">
+      <p>前两周接到义工的电话，告诉我资助的那个孩子已经小学毕业了，问我是否愿意继续资助他上中学，我没有犹豫答应下来。 
+
+4年前，朋友Landy给我们转发了他的blog，后来我发现原来周围的朋友里有不少人都在默默的参与到各种不同的助学NGO活动中来，比如Apache，比如Alalei…… 在这四年中，我们部门的老板和同事也都给予了我很大的物质支持和帮助，比如林老板，比如LiuMing，比如XiMeng…… 所以我必须说，由于我们大家的爱心，才使得一个孩子远离了失学的危险。
+
+想起Alalei同学说过的一句话，她说“正是通过帮助这些孩子们上学，看到他们那么快乐，我才觉得我们平时工作的辛苦和郁闷都是值得的。”
+
+希望有更多的人参与到帮助孩子们上学的NGO活动中来，我参加的是王博计划 www.wes... <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+<!-- Normal list item -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/life/2024/09/22/%E5%91%A8%E6%9C%AB%E6%BC%AB%E7%94%BB.html">
+      周末加班<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2024, Sep 22</span><span class="post-author left-vsplit"><i class="fa fa-pencil"></i> TOPGUN</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/life/2024/09/22/%E5%91%A8%E6%9C%AB%E6%BC%AB%E7%94%BB.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/%E7%94%9F%E6%B4%BB%E6%BC%AB%E7%94%BB.PNG); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/life/2024/09/22/%E5%91%A8%E6%9C%AB%E6%BC%AB%E7%94%BB.html">
+      <p>台上一分钟，台下十年功
+
+
+ <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/life/2024/05/12/ai-pic.html">
+      AI趣图<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2024, May 12</span><span class="post-author left-vsplit"><i class="fa fa-pencil"></i> TOPGUN</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/life/2024/05/12/ai-pic.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/ai-doll.jpg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/life/2024/05/12/ai-pic.html">
+      <p>
+ <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/life/2022/01/26/life-note.html">
+      普通一天<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2022, Jan 26</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/life/2022/01/26/life-note.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/light.jpg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/life/2022/01/26/life-note.html">
+      <p>
+  “当你老了，回顾一生，就会发觉：什么时候出国读书，什么时候决定做第一份职业、何时选定了对象而恋爱、什么时候结婚，其实都是命运的巨变。只是当时站在三岔路口，眼见风云千樯，你作出选择的那一日，在日记上，相当沉闷和平凡，当时还以为是生命中普通的一天。 ”
+
+
+2022年春节前的最后一周工作日，工作节奏并没有轻松下来，然而我却忽然想写点什么。
+
+记得在更早的年代，人们会写博客，我至今记得在MsnSpace上同学朋友里时不时就会出现一两篇让我至今记忆犹新的佳作。后来人们忙了，只会在微博上写下几十个字的短短一句话。而如今发朋友圈也只是身边少数朋友的习惯，有时候大家忙的顾不上说，有时候大家只是习惯了不在人前表露喜怒哀乐。
+
+时间久了，难免有些感慨：生活中有些事，一旦变成了回忆，就难免模糊褪色。... <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/life/2018/10/31/%E9%87%91%E5%BA%B8.html">
+      侠之大者<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2018, Oct 31</span><span class="post-author left-vsplit"><i class="fa fa-pencil"></i> 唐翰</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/life/2018/10/31/%E9%87%91%E5%BA%B8.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/%E9%87%91%E5%BA%B8ICON.jpeg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/life/2018/10/31/%E9%87%91%E5%BA%B8.html">
+      <p>当我离开阿里的时候，离职信封里有张纸写着：退隐江湖。
+
+每个人一生都离不开江湖。我感谢金庸老先生，给我们创造了那么精彩的武侠江湖。在青少年时代，读他的小说了解江湖：行侠仗义，宅心仁厚，舍生取义，快意恩仇…… 那感觉是何等的畅快，尤其每每读到小说的结尾，我总会有些感慨和期盼：希望自己能像书中的主人公一样闯荡江湖。
+
+进入江湖这几十年，经历种种人和事，见识了伪君子、恃强凌弱、见利忘义等种种，才知道这是江湖的另一面。个中滋味，冷暖自知。这时候再读金庸的武侠，会感到温暖，因为他告诉我们：天地自有公道。书中的大侠，没有哪一个是一帆风顺。用现在的话讲，每一个主人公都经历过人生的至暗时刻。看到于此，也就释然。
+
+年近不惑，看小说的时间少了，也很久没再重读金庸的小说。然而每每有人生感悟，蓦然发现其实金... <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/career/2018/05/14/tencent-onboard.html">
+      腾讯微报<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2018, May 14</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/career/2018/05/14/tencent-onboard.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/default-image.jpeg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/career/2018/05/14/tencent-onboard.html">
+      <p>你绝对想不到它一般出现的场合
+
+
+
+ <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/example/2017/12/18/video-example.html">
+      Video example<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2017, Dec 18</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/example/2017/12/18/video-example.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/default-image.jpeg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/example/2017/12/18/video-example.html">
+      <p>Canon in D (Pachelbel’s Canon) - Cello &amp; Piano [BEST WEDDING VERSION]
+Some of you know that we occasionally play for weddings. As you can imagine, we get a LOT of requests for Canon in D, and we discovered that there were no good arrangements available anywhere for piano and cello! Hard to believe given its popularity. So we decided to make ... <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#video">#video</a></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/example/2017/12/15/table-example.html">
+      Table example<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2017, Dec 15</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/example/2017/12/15/table-example.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/default-image.jpeg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/example/2017/12/15/table-example.html">
+      <p>Table example as below
+
+For now, these extended features are provided:
+
+
+  Cells spanning multiple columns
+  Cells spanning multiple rows
+  Cells text align separately
+  Table header not required
+  Grouped table header rows or data rows
+
+
+Rowspan and Colspan
+^^ in a cell indicates it should be merged with the cell above.
+This feature is contribu... <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#table">#table</a></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/example/2017/12/08/mermaid-example.html">
+      Mermaid example<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2017, Dec 08</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/example/2017/12/08/mermaid-example.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/default-image.jpeg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/example/2017/12/08/mermaid-example.html">
+      <p>1. Pie chart
+
+
+
+2. sequence diagram
+
+
+
+
+
+3. Class diagram
+
+
+4. State diagram
+
+ <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/example/2017/12/05/an-exhibit-of-markdown.html">
+      An exhibit of Markdown<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2017, Dec 05</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/example/2017/12/05/an-exhibit-of-markdown.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/default-image.jpeg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/example/2017/12/05/an-exhibit-of-markdown.html">
+      <p>This note demonstrates some of what Markdown is capable of doing.
+
+An exhibit of Markdown
+
+Note: Feel free to play with this page. Unlike regular notes, this doesn’t automatically save itself.
+
+Basic formatting
+
+Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no... <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#example">#example</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#markdown">#markdown</a>
+</div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/example/2017/12/04/plantuml-example.html">
+      Plantuml example<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2017, Dec 04</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/example/2017/12/04/plantuml-example.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/default-image.jpeg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/example/2017/12/04/plantuml-example.html">
+      <p>My First PlantUML
+
+PlantUML Block-1
+
+
+PlantUML Block-2
+
+
+PlantUML Block-3
+
+
+PlantUML Block-4
+
+
+ <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"><a class="post-tag" href="/jekyll-theme-yat/tags.html#plantuml">#plantuml</a></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/2017/09/03/welcome.html">
+      Welcome 欢迎!<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2017, Sep 03</span><span class="post-author left-vsplit"><i class="fa fa-pencil"></i> TOPGUN</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/2017/09/03/welcome.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(https://bit.ly/3xTmdUP); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/2017/09/03/welcome.html">
+      <p>🧑‍💻 You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the _posts ... <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/example/2017/06/10/quick-mardown-example.html">
+      Quick markdown example<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2017, Jun 10</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/example/2017/06/10/quick-mardown-example.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(https://github.com/jeffreytse/jekyll-theme-yat/assets/9413601/2ed22d49-90b1-4f7e-8e8f-b77b21dee505); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/example/2017/06/10/quick-mardown-example.html">
+      <p>
+
+Paragraphs are separated by a blank line.
+
+2nd paragraph. Italic, bold, and monospace. Itemized lists
+look like:
+
+
+  this one
+  that one
+  the other one
+
+
+Note that — not considering the asterisk — the actual text
+content starts at 4-columns in.
+
+
+  Block quotes are
+written like so.
+
+  They can span multiple paragraphs,
+if you like.
+
+
+Use 3 da... <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/example/2017/05/26/mathjax-test.html">
+      Mathjax Test<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2017, May 26</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/example/2017/05/26/mathjax-test.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/default-image.jpeg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/example/2017/05/26/mathjax-test.html">
+      <p>
+  A safe integer is an integer that
+    
+      can be exactly represented as an IEEE-754 double precision number, and
+      whose IEEE-75 representation cannot be the result of rounding any other integer to fit the IEEE-754 representation
+    
+  
+  For example, $ 2 ^ {53} - 1 $ is a safe integer,
+    
+      it can be exactly represented
+    
+  
+
+ <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/example/2017/05/20/this-post-demonstrates-post-content-styles.html">
+      This post demonstrates post content styles<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2017, May 20</span><span class="post-author left-vsplit"><i class="fa fa-pencil"></i> Bart Simpson</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/example/2017/05/20/this-post-demonstrates-post-content-styles.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/default-image.jpeg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/example/2017/05/20/this-post-demonstrates-post-content-styles.html">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
+
+Some great heading (h2)
+
+Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, m... <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/example/2017/02/28/test-markdown.html">
+      Test markdown<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2017, Feb 28</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/example/2017/02/28/test-markdown.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/default-image.jpeg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/example/2017/02/28/test-markdown.html">
+      <p>You can write regular markdown here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to take 5 minutes to learn how to write in markdown - it’ll teach you how to transform regular text into bold/italics/headings/tables/etc.
+
+Here is some bold text
+
+Here is a secondary heading
+
+Here’s a useless table:
+
+
+  
+   ... <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/example/2017/01/01/another-test-markdown.html">
+      Another test markdown<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2017, Jan 01</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 10 mins</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/example/2017/01/01/another-test-markdown.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/default-image.jpeg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/example/2017/01/01/another-test-markdown.html">
+      <p>Put the math expression within $…$:
+
+\(\LaTeX{}\)
+
+$\Pi$
+
+$ a * b = c ^ b $
+
+$ 2^{\frac{n-1}{3}} $
+
+$ \int_a^b f(x)\,dx. $
+
+\( \int_a^b f(x)\,dx. \)
+
+$$
+\begin{cases}
+\text{if true}\ foo 
+\text{if false}\ bar
+\end{cases}
+$$
+
+
+  
+    
+      $ \rho {\rm{FOD}} = \sum\limits{\sigma ,i} {(\delta _1 - \delta _2 n_i^\sigma )
+      \phi _i^\sigma ({\bf{... <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="post-item ">
+  <h2 class="post-title">
+    <a class="post-link" href="/jekyll-theme-yat/life/2016/02/09/life.html">
+      普通的一天<span class="post-badges">
+  <span class="post-badge badge-top">TOP</span>
+  <span class="post-badge badge-new">NEW</span>
+</span>
+</a>
+  </h2>
+  <div class="post-meta">
+    <span class="post-date"><i class="fa fa-calendar"></i>  2016, Feb 09</span><span class="post-author left-vsplit"><i class="fa fa-pencil"></i> TOPGUN</span><span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </div>
+  <div class="post-excerpt">
+<a class="post-image" href="/jekyll-theme-yat/life/2016/02/09/life.html" style="flex: 0 1 38.2%">
+      <div style="background-image: url(/jekyll-theme-yat/assets/images/light.jpg); height: 160px"></div>
+    </a><a class="post-text" href="/jekyll-theme-yat/life/2016/02/09/life.html">
+      <p>“当你老了，回顾一生，就会发觉：什么时候出国读书，什么时候决定做第一份职业、何时选定了对象而恋爱、什么时候结婚，其实都是命运的巨变。只是当时站在三岔路口，眼见风云千樯，你作出选择的那一日，在日记上，相当沉闷和平凡，当时还以为是生命中普通的一天。 ”
+ <span class="read_more">Read More</span></p>
+    </a>
+  </div>
+  <div class="post-tags"></div>
+</li>
+</ul>
+
+  <!-- Pagination links -->
+</div>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="common-list">
+  <ul>
+    <li>
+      <a href="/jekyll-theme-yat/index.html">
+        All<span>19</span>
+      </a>
+    </li>
+
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-Career">
+          Career <span>1</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-Life">
+          Life <span>6</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-example">
+          example <span>10</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-%E6%96%87%E5%AD%A6">
+          文学 <span>1</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>Copyright © 1997-2025 TOPGUN</div>
+
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a>
+</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
